@@ -13,6 +13,9 @@ set showmatch
 set wildmenu
 set wildignore=*.o,*~,*.pyc
 
+set lines=50
+set columns=150
+
 colorscheme desert
 filetype on
 syntax enable
@@ -41,6 +44,9 @@ filetype indent plugin on
 
 " tab stops and change tabs to spaces
 au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
+
+" Set winpos to 00
+autocmd GUIEnter * :winpos 0 0
 
 " remove trailing whitespace automagically on write
 autocmd FileType c,cpp,java,php,python autocmd BufWritePre <buffer> :%s/\s\+$//e
